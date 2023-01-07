@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    color: #555;
+    font-size: 2em;
+    margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-form input[type="text"] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-form button[type="submit"] {
+    width: 20%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.current-city {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.current-temp {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+.current-description {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.forecast {
+    margin: 20px 0;
+}
+
+.forecast h2 {
+    color: #555;
+    font-size: 1.5em;
+    margin: 0 0 20px 0;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-card {
+    width: 20%;
+    text-align: center;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.forecast-card h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.forecast-card img {
+    width: 100%;
+}
+
+.forecast-card p {
+    font-size: 1em;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .forecast-container {
+        flex-direction: column;
+    }
+
+    .forecast-card {
+        width: 100%;
+    }
 }

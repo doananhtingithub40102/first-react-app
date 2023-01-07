@@ -1,17 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { useState, useEffect } from "react"
+import { useWeather_today, useWeather_5day } from "./useFetch"
+import Header from "./components/Header"
+import Form from "./components/Form"
+import Results from "./components/Results"
+import "./App.css"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+export default function App() {
+    const title = "Weather Forecast"
+    const [city, setCity] = useState("Soc Trang")
+    const [coord, setCoord] = useState({ longitude: 105.98, latitude: 9.6033 })
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    const weather_today = useWeather_today(city)
+    const weather_5day = useWeather_5day(coord)
+
+    useEffect(() => {
+        if (weather_today.main) {
+            const lat = weather_today.coord.lat
+            const lon = weather_today.coord.lon
+            setCoord({ longitude: lon, latitude: lat })
+        }
+    }, [weather_today])
+
+    return (
+        <div className="container">
+            <Header title={title} />
+            <Form setCity={setCity} />
+            <Results weather_today={weather_today} weather_5day={weather_5day} />
+        </div>
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<App />)
