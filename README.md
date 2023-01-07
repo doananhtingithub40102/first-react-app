@@ -78,4 +78,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Live app
 
-[Weather Forecast App](https://doananhtingithub40102.github.io/first-react-app/).
+<a href="https://doananhtingithub40102.github.io/first-react-app/" target="_blank">Weather Forecast App</a>
