@@ -32,43 +32,43 @@ You may also see any lint errors in the console.
 
 To deploy the application on github pages, following the below steps:
 
-> 1. Add GitHub Pages dependency package
->
-> Install "gh-pages" package using the below command:
->
-> ### `npm install gh-pages --save-dev`
+1. Add GitHub Pages dependency package
 
-> 2. Add homepage property`
->
-> Add the below property to your package.json file:
->
-> - **"homepage": "https://{username}.github.io/{your_repository}"**
+Install "gh-pages" package using the below command:
 
-> 3. Add deploy scripts 
->
-> Add both predeploy and deploy property scripts to the package.json file as below:
->
->> "predeploy": "npm run build",
->>
->> "deploy": "gh-pages -d build"
+### `npm install gh-pages --save-dev`
 
-> 4. Create a remote GitHub repository
->
-> - Initialize the Git using "git init" command.
->
-> - Add it as remote using "git remote add origin your-github-repository-url.git" command.
+2. Add homepage property`
 
-> 5. Deploy the Application to GitHub Pages
->
-> Now run the below command to deploy your react application to GitHub Pages:
->
-> ### `npm run deploy`
+Add the below property to your package.json file:
 
-> 6. Access deployed site
+- **"homepage": "https://{username}.github.io/{your_repository}"**
+
+3. Add deploy scripts 
+
+Add both predeploy and deploy property scripts to the package.json file as below:
+
+> "predeploy": "npm run build",
 >
-> - Select branch to "gh-pages" and click on the "Save" button in Github Pages Section.
->
-> Now, you can access the deployed site using the published URL!
+> "deploy": "gh-pages -d build"
+
+4. Create a remote GitHub repository
+
+- Initialize the Git using "git init" command.
+
+- Add it as remote using "git remote add origin your-github-repository-url.git" command.
+
+5. Deploy the Application to GitHub Pages
+
+Now run the below command to deploy your react application to GitHub Pages:
+
+### `npm run deploy`
+
+6. Access deployed site
+
+- Select branch to "gh-pages" and click on the "Save" button in Github Pages Section.
+
+Now, you can access the deployed site using the published URL!
 
 ## Learn More
 
