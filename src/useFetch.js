@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const MY_API_KEY = "dc22b13229ca0ff4e616dc201f077c7b"
+const MY_API_KEY = "619bfcc6ea3bc33ff88630a3ad0218a2"
 
 const useWeather_today = city => {
     const [weather, setWeather] = useState({})
