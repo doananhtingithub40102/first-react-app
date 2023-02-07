@@ -12,9 +12,9 @@ This is a React application that displays a weather forecast for a given locatio
 
 - Working with APIs to retrieve weather data from a third-party service (Open Weather Map) and incorporate it into your app.
 
-- Displaying the current weather for the city, including the temperature, humidity, and a description of the weather.
+- Displaying the current weather for the city, including the temperature (Kevin), humidity, and a description of the weather.
 
-- Displaying a 5-day forecast for the city, including the temperature, humidity, and a description of the weather for each day.
+- Displaying a 5-day forecast for the city, including the temperature (Kevin), humidity, and a description of the weather for each day.
 
 ## Available Scripts
 
