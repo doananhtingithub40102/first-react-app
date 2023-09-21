@@ -2,21 +2,21 @@ import { useState, useEffect } from "react"
 
 const MY_API_KEY = "619bfcc6ea3bc33ff88630a3ad0218a2"
 
-const useWeather_today = city => {
+const useWeather_today = (location) => {
     const [weather, setWeather] = useState({})
 
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(
-                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${MY_API_KEY}`
+                `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${MY_API_KEY}`
             )
-            const data = await response.json()
 
+            const data = await response.json()
             setWeather(data)
         }
 
         fetchData()
-    }, [city])
+    }, [location])
 
     return weather
 }
